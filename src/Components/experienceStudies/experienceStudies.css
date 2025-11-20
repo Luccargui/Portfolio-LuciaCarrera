@@ -56,7 +56,6 @@ article{
 }
 article p, article li {
   margin-bottom: var(--margin-xxs);
-
 }
 @media (max-width: 500px){
     section.expStu> h2 {
