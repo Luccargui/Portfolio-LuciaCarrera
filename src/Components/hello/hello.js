@@ -11,7 +11,7 @@ export const helloSection = () =>{
   const p = document.createElement("p");
 
   section.className= "helloSection";
-h2.innerHTML= `<img src= "./src/assets/media/saludo-vulcano-unscreen.gif" style="width:20px; 1background-color: black"> ¡Hola! Soy`;
+h2.innerHTML= `<img src= "../../assets/Media/saludo-vulcano-unscreen.gif" style="width:20px; 1background-color: black"> ¡Hola! Soy`;
 h1.textContent= `Lucía Carrera`;
 p.innerHTML= `Full Stack Developper en proceso <img src= "./src/assets/Media/puno.png" style="width:16px">`;
 p.addEventListener("mouseenter", ()=> {
