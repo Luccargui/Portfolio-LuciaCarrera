@@ -17,10 +17,8 @@ h3SubSection.textContent = "Experiencia Laboral";
 createArticles(arrayExperience, "expStu");
 backToSectionButton.textContent = "Volver Atrás";
 backToSectionButton.addEventListener("click", () => {
-  const expStuSection = document.querySelector("section.expStu");
-  if (expStuSection) { 
-    expStuSection.remove();
-  }
+const expStuSection = document.querySelector("section.expStu");
+  expStuSection.innerHTML = "";
   experienceStudiesSection();
 });
 buttonStu.textContent = "Ver Estudios";
@@ -52,10 +50,8 @@ const buttonExp =document.createElement("button");
 createArticles(arrayStudies, "expStu");
 backToSectionButton.textContent= "Volver Atrás";
 backToSectionButton.addEventListener("click", () => {
-  const expStuSection = document.querySelector("section.expStu");
-  if (expStuSection) { 
-    expStuSection.remove();
-  }
+ const expStuSection = document.querySelector("section.expStu");
+  expStuSection.innerHTML = "";
   experienceStudiesSection();
      }
 );

@@ -4,25 +4,39 @@ import { createExpSection, createStuSection } from "../createExpStuSection/creat
 import "./experienceStudies.css";
 
 export const experienceStudiesSection = () => {
+  let section = document.querySelector("section.expStu");
+
+  // Si no existe, créala
+  if (!section) {
     const body = document.querySelector("body");
-  const section = document.createElement("section");
+    section = document.createElement("section");
+    section.className = "expStu";
+    body.appendChild(section);
+  }
+
+  // Siempre vaciar su contenido antes de rellenarlo
+  section.innerHTML = "";
+
   const h2 = document.createElement("h2");
   const divButtons = document.createElement("div");
   const expButton = document.createElement("button");
   const stuButton = document.createElement("button");
   
-  section.className = "expStu";
   h2.textContent = "Experiencia y Estudios";
+  
   expButton.textContent = "Experiencia";
-   expButton.type = "button";
+  expButton.type = "button";
+  
   stuButton.textContent = "Estudios";
   stuButton.type = "button";
-  divButtons.className= "divButtons";
+  
+  divButtons.className = "divButtons";
 
-  expButton.addEventListener("click", () =>createExpSection());
-  stuButton.addEventListener("click", () =>createStuSection());
+  // Eventos
+  expButton.addEventListener("click", () => createExpSection());
+  stuButton.addEventListener("click", () => createStuSection());
 
-  body.appendChild(section);
+  // Añadir al DOM
   section.appendChild(h2);
   section.appendChild(divButtons);
   divButtons.appendChild(expButton);
