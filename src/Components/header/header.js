@@ -34,11 +34,11 @@ imgButton.alt= element.language;
   button.appendChild(imgButton);
   }
 
-  logo.src= "./src/assets/favicon sin fondo/Favicon48nbg.png";
+  logo.src= "../../assets/favicon sin fondo/Favicon48nbg.png";
   aLogo.href= "#home";
 
 imgBurger.id= "menuBurger";
-imgBurger.src= "./src/assets/Media/burger-bar.png";
+imgBurger.src= "../../assets/Media/burger-bar.png";
 imgBurger.alt= "menu-burger-mobile";
 imgBurger.classList.add("burger");
 imgBurger.addEventListener("click", ()=>{
@@ -47,7 +47,7 @@ imgBurger.addEventListener("click", ()=>{
 })
 
 
-themeMode.src= "./src/assets/Media/day-and-night.png";
+themeMode.src= "../../assets/Media/day-and-night.png";
 themeMode.alt = "dark-light-mode-switch";
 themeMode.addEventListener("click", () =>{
   body.classList.toggle("light");
