@@ -1,0 +1,75 @@
+section.expStu {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-s);
+  padding: var(--padding-m);
+  flex-wrap: wrap;
+}
+section.expStu>h2 {
+  font-size: 40px;
+}
+section.expStu>div{
+   display: flex;
+   flex-direction: row;
+   gap: var(--gap-m);
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+ section.expStu>div>button {
+padding:var(--padding-xxs) var(--padding-xs);
+  font-weight: 600;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background-color: var(--color-secondary);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+section.expStu>div>button:hover {
+background-color: var(--color-accent);
+  transform: translateY(-4px);
+}
+section.expStu>div>button:active {
+  transform: translateY(0);
+  border:none;
+}
+
+article{
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-m);
+  min-width: 250px;
+  max-width: 300px;
+  border-radius: 20px;
+  height: fit-content;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: var(--padding-xs);
+  background-color: rgb(254, 41, 113,0.2);
+}
+article p, article li {
+  margin-bottom: var(--margin-xxs);
+
+}
+@media (max-width: 500px){
+    section.expStu> h2 {
+      font-size: 20px;
+}
+}
+@media (max-width:1400px) and (min-width:1000px){
+      section.expStu> h2 {
+  font-size: 60px;
+}
+}
+@media (max-width:2000px) and (min-width:1400px) {
+      section.expStu> h2 {
+  font-size: 80px;
+}
+}

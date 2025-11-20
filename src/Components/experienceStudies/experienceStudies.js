@@ -1,0 +1,41 @@
+import { arrayStudies } from "../../data/studies";
+import { arrayExperience } from "../../data/workingExperience";
+import { createExpSection, createStuSection } from "../createExpStuSection/createExpStuSection";
+import "./experienceStudies.css";
+
+export const experienceStudiesSection = () => {
+    const body = document.querySelector("body");
+  const section = document.createElement("section");
+  const h2 = document.createElement("h2");
+  const divButtons = document.createElement("div");
+  const expButton = document.createElement("button");
+  const stuButton = document.createElement("button");
+  
+  section.className = "expStu";
+  h2.textContent = "Experiencia y Estudios";
+  expButton.textContent = "Experiencia";
+   expButton.type = "button";
+  stuButton.textContent = "Estudios";
+  stuButton.type = "button";
+  divButtons.className= "divButtons";
+
+  expButton.addEventListener("click", () =>createExpSection());
+  stuButton.addEventListener("click", () =>createStuSection());
+
+  body.appendChild(section);
+  section.appendChild(h2);
+  section.appendChild(divButtons);
+  divButtons.appendChild(expButton);
+  divButtons.appendChild(stuButton);
+};
+
+
+export const expButtonFunction = () => {
+    buttonToArticle(arrayExperience,"Experiencia Laboral");
+    buttonsExpStuToOTher("Ver Estudios",arrayExperience, "Ver Experiencia");
+    };
+
+export const stuButtonFunction = ()=> {
+      buttonToArticle(arrayExperience,"Formación Académica");
+buttonsExpStuToOTher("Ver Experiencia",arrayStudies,"Ver Estudios");
+}

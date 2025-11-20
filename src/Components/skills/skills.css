@@ -1,0 +1,61 @@
+section.skills {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  gap:var(--gap-s);
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: var(--padding-m);
+}
+
+section.skills> h2{
+  font-size: 40px;
+}
+
+section.skills>div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap:var(--gap-s)
+}
+section.skills>div>img {
+  width:60px;
+  transition: all 0.5s ease-in-out;
+}
+section.skills>div>img:hover {
+transform: scale(1.1);
+}
+@media (max-width: 500px){
+    section.skills> h2 {
+      font-size: 20px;
+}
+section.skills>div>img {
+  width:50px;
+}
+}
+@media (max-width:1400px) and (min-width:1000px){
+      section.skills> h2 {
+  font-size: 60px;
+}
+section.skills>div {
+  justify-content: space-evenly;
+  gap:var(--gap-m)
+}
+section.skills>div>img {
+  width:70px;
+}
+}
+@media (max-width:2000px) and (min-width:1400px) {
+      section.skills> h2 {
+  font-size: 80px;
+}
+section.skills>div {
+  justify-content: space-evenly;
+  gap:var(--gap-l);
+}
+section.skills>div>img {
+  width:80px;
+}
+}

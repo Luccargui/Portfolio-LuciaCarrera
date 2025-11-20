@@ -1,0 +1,65 @@
+section.aboutMe {
+  background-image: url("../../assets/Media/hero.jpg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+section.aboutMe>div {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-s);
+  gap: var(--gap-s);
+  width:50%;
+  background-color: rgb(0, 0, 0,0.5);
+  text-align: center;
+}
+
+body.light>section.aboutMe>div {
+  background-color: rgba(255, 255, 255, 0.582);
+}
+
+section.aboutMe>div>h2{
+  font-size: 40px;
+}
+section.aboutMe>div>h3{
+  font-size: 30px;
+}
+
+@media (max-width: 500px){
+    section.aboutMe>div>h2 {
+      font-size: 20px;
+}
+section.aboutMe>div>h3{
+  font-size: 15px;
+}
+}
+@media (max-width: 800px){
+  section.aboutMe {
+   background-position: 70%;
+}
+  section.aboutMe>div {
+  padding: var(--padding-xs);
+  gap: var(--gap-xs);
+  width:100%;
+  background-color: rgb(0, 0, 0,0.8);
+}
+}
+@media (max-width:1400px) and (min-width:1000px){
+    section.aboutMe>div>h2 {
+  font-size: 60px;
+}
+section.aboutMe>div>h3{
+  font-size: 40px;
+}
+}
+@media (max-width:2000px) and (min-width:1400px) {
+    section.aboutMe>div>h2 {
+  font-size: 80px;
+}
+section.aboutMe>div>h3{
+  font-size: 60px;
+}
+
+}

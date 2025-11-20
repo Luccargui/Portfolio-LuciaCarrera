@@ -1,0 +1,102 @@
+header{
+background-color: var(--color-dark);
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+width:100%;
+top:0;
+z-index: 10;
+}
+
+nav {
+  height:50px;
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px var(--padding-xs) ;
+}
+nav img{
+  cursor: pointer;
+}
+nav>img:first-of-type{
+  width: 45px;
+}
+.burger{
+  width:0px;
+  display: none;
+  position: relative;
+}
+nav>ul {
+  display: flex;
+  gap: var(--gap-m);
+}
+
+nav>ul>a>li{
+  font-size: 18px;
+}
+
+.divBT{
+  height:25px;
+  width:100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: var(--gap-m);
+}
+
+.divBT>div{
+  display: flex;
+  gap: var(--gap-xxs)
+}
+.divBT>div>button{
+  border:none;
+  background-color: transparent;
+}
+
+.divBT img {
+ width:20px;
+cursor: pointer;
+transition: all 0.5s ease-in-out;
+}
+.divBT img:hover{
+  transform: scale(1.1);
+}
+.divBT>img {
+  margin-right: var(--margin-s);
+  cursor: pointer;
+}
+  nav>div>div{
+    display: none;
+    width:0px;
+    height: 0px;
+    position: absolute;
+    top:50px;
+    right:10px;
+   }
+@media(max-width:700px) {
+  nav{
+    justify-content: space-between;
+  }
+  .burger {
+    display: block;
+    width:30px;
+  }
+
+   nav>div>div.active {
+    display:flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: var(--padding-xs);
+    gap:var(--gap-xs);
+    width:250px;
+    background-color: var(--color-dark);
+  }
+  nav>ul {
+    display: none;
+  }
+  .divBT{
+      justify-content: start;
+      padding-left: var(--padding-xs);
+  }
+}

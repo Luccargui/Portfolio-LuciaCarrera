@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+  /*COLORS*/
+    /*general*/
+  --color-primary: rgb(254, 41, 113);
+  --color-secondary: rgb(255, 93, 67);
+  --color-accent: rgb(255, 137, 0);
+  --color-dark-secondary: rgb(17, 24, 39);
+  --color-light-secondary: #a7a9be;
+  --color-dark: #000000;
+  --color-light: #fffffe;
+    /*bg*/
+    --bg-color-1: var(--color-dark);
+    --bg-color-2: var(--color-light);
+  /*FONTS*/
+    /*names*/
+    --font-headings: "Anton", sans-serif;
+    --font-p: "Lato", sans-serif;
+    /*sizes*/
+    /*colors*/
+    --p-font-color-darkmode: var(--color-light);
+    --p-font-color-lightmode: var(--color-dark);
+    --heading-color-1: var(--color-primary);
+    --heading-color-2: var(--color-secondary);
+  /*SPACING*/
+  /*margin*/
+  --margin-xxs:5px;
+  --margin-xs:10px;
+  --margin-s:20px;
+  --margin-m:40px;
+  --margin-l:60px;
+  --margin-xl:80px;
+  --margin-xxl:100px;
+    /*padding*/
+  --padding-xxs:5px;
+  --padding-xs:10px;
+  --padding-s:20px;
+  --padding-m:40px;
+  --padding-l:60px;
+  --padding-xl:80px;
+  --padding-xxl:100px;
+    /*gap*/
+  --gap-xxs:5px;
+  --gap-xs:10px;
+  --gap-s:20px;
+  --gap-m:40px;
+  --gap-l:60px;
+  --gap-xl:80px;
+  --gap-xxl:100px;
+}
+/*Rol	Color	Hex	Descripción / Uso recomendado
+🎨 Primary	#FE2971	Rosa fucsia	Color principal (acento, botones, enlaces)
+🔸 Secondary	#FF5D43	Rojo anaranjado	Hover states, destacados o CTA secundarios
+🧡 Accent	#FF8900	Naranja cálido	Detalles decorativos o íconos
+⚫ Neutral Dark	#000000	Negro puro	Texto principal, contraste con ivory
+⚪ Neutral Light	#FFFFF0 (Ivory)	Marfil	Fondo base o secciones claras*/
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  background-color: var(--bg-color-1);
+}
+body.light, body.light header {
+  background-color: var(--bg-color-2);
+}
+
+h1,h2,h3,h4,h5{
+  font-family: var(--font-headings);
+}
+h1,h2 {
+  color: var(--heading-color-1);
+}
+h3,h4,h5{
+  color: var(--heading-color-2);
+}
+p,a, button{
+  color: var(--p-font-color-darkmode);
+}
+body.light p, body.light a {
+  color: var(--p-font-color-lightmode);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover, body.light a:hover {
+  color:var(--color-secondary);
+}

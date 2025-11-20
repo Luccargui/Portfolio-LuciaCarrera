@@ -1,0 +1,95 @@
+section.helloSection {
+  width:100%;
+  margin-top:var(--margin-xl);
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding-m);
+  gap: var(--gap-xs);
+  align-items: center;
+}
+section.helloSection>div>h1 {
+  color: var(--heading-color-2);
+}
+section.helloSection>img {
+  max-height:350px;
+  min-height: 180px;
+  border-radius: 40px;
+}
+section.helloSection>div {
+  cursor: url('/src/assets/Media/puno-pink.png') 16 16, pointer;
+}
+section.helloSection>div>h2 {
+  font-size: 40px;
+}
+section.helloSection>div>h1 {
+  font-size: 60px;
+}
+section.helloSection>div>p {
+  font-size: 20px;
+  width: fit-content;
+}
+@media (max-width:500px) {
+  section.helloSection {
+  margin-top:var(--margin-l);
+  height: 420px;
+  padding: var(--padding-m) var(--padding-xs);
+  gap: var(--gap-xs);
+}
+section.helloSection>img {
+  max-height:275px;
+  min-height: 200px;
+  border-radius: 40px;
+}
+  section.helloSection>div>h2 {
+  font-size: 20px;
+}
+section.helloSection>div>h1 {
+  font-size: 40px;
+}
+section.helloSection>div>p {
+  font-size: 12px;
+  width: fit-content;
+}
+}
+@media (max-width:1400px) and (min-width:1000px) {
+  section.helloSection {
+  margin-top:var(--margin-s);
+  height: 600px;
+  justify-content: space-evenly;
+}
+section.helloSection>img {
+  max-height:400px;
+}
+  section.helloSection>div>h2 {
+  font-size: 60px;
+}
+section.helloSection>div>h1 {
+  font-size: 85px;
+}
+section.helloSection>div>p {
+  font-size: 30px;
+  width: fit-content;
+}
+}
+@media (max-width:2000px) and (min-width:1400px) {
+  section.helloSection {
+  margin-top:var(--margin-xl);
+  height: 600px;
+   gap: var(--gap-m);
+  justify-content: space-evenly;
+}
+section.helloSection>img {
+  max-height:400px;
+}
+  section.helloSection>div>h2 {
+  font-size: 80px;
+}
+section.helloSection>div>h1 {
+  font-size: 105px;
+}
+section.helloSection>div>p {
+  font-size: 50px;
+  width: fit-content;
+}
+}
