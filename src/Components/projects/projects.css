@@ -12,13 +12,17 @@ section.project {
 section.project>div {
 display: flex;
 width:100%;
-flex-wrap: wrap;
+overflow-x: scroll;
+scroll-behavior: smooth;
   padding: var(--padding-m) 0;
 justify-content: center;
 align-items: start;
 gap: var(--gap-s);
-scrollbar-color: var(--color-secondary) rgb(254, 41, 113,0.2);
+ scrollbar-color: var(--color-secondary) rgb(254, 41, 113,0.2); */
 }
+/* section.project>div::-webkit-scrollbar {
+background-color: transparent;
+} */
 section.project article {
   min-width: 250px;
   max-width: 300px;
