@@ -6,6 +6,7 @@ import { skillsSection } from './Components/skills/skills';
 import { aboutMeSection } from './Components/aboutMe/aboutMe';
 import { experienceStudiesSection } from './Components/experienceStudies/experienceStudies';
 import { projectsSection } from './Components/projects/projects';
+import { contactSection } from './Components/contactForm/contactForm';
 
 headerSection(arrayMenu);
 helloSection();
@@ -13,3 +14,4 @@ aboutMeSection();
 skillsSection();
 experienceStudiesSection();
 projectsSection();
+contactSection();
