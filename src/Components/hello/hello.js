@@ -13,18 +13,7 @@ export const helloSection = () =>{
   section.className= "helloSection";
 h2.innerHTML= `<img src= "../../assets/Media/saludo-vulcano-unscreen.gif" style="width:20px; 1background-color: black"> ¡Hola! Soy`;
 h1.textContent= `Lucía Carrera`;
-p.innerHTML= `Full Stack Developper en proceso <img src= "../../assets/Media/puno.png" style="width:16px">`;
-p.addEventListener("mouseenter", ()=> {
-p.innerHTML = `
- Full Stack Developper en proceso 
-  <img src="../../assets/Media/choque-de-punos-unscreen.gif"
-       style="width:40px; filter: drop-shadow(0 0 10px white) !important;">
-`;
-});
-p.addEventListener("mouseleave", ()=> {
-p.innerHTML= `Full Stack Developper en proceso <img src= "../../assets/Media/puno.png" style="width:16px;">`;
-});
-
+p.innerHTML= `Full Stack Developper en proceso`;
 img.src="../../assets/Media/Imagen1.jpg";
 img.alt="me";
 

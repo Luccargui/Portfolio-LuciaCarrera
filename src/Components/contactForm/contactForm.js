@@ -26,8 +26,8 @@ export const contactSection = () => {
 divText.appendChild(email);
 divText.appendChild(linkedin);
 
-    divContact.appendChild(divText);
     divContact.appendChild(img);
+    divContact.appendChild(divText);
 
  const h3 =document.createElement("h3");
  h3.textContent= "Opiniones";
@@ -35,8 +35,4 @@ divText.appendChild(linkedin);
   section.classList.add("contact");
     body.appendChild(section);
   createArticles(arrayOpinions, "contact");
-  
-
-
-
 }

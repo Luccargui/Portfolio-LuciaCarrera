@@ -51,6 +51,13 @@ themeMode.src= "../../assets/Media/day-and-night.png";
 themeMode.alt = "dark-light-mode-switch";
 themeMode.addEventListener("click", () =>{
   body.classList.toggle("light");
+  if (body.className.includes("light")) {
+    localStorage.setItem("theme", "light");
+  } else {
+    localStorage.setItem("theme", "dark");
+  }
+
+
 })
 
 body.appendChild(header);

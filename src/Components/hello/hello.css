@@ -16,9 +16,7 @@ section.helloSection>img {
   min-height: 180px;
   border-radius: 40px;
 }
-section.helloSection>div {
-  cursor: url('/src/assets/Media/puno-pink.png') 16 16, pointer;
-}
+
 section.helloSection>div>h2 {
   font-size: 40px;
 }

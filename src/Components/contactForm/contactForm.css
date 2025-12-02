@@ -16,28 +16,22 @@ section.contact>div{
    flex-direction: row;
    gap: var(--gap-xs);
   justify-content: center;
-  align-items: start;
+  align-items: center;
   flex-wrap: wrap;
 }
-div.divContact {
-  display: flex;
-  flex-direction: row;
-  gap: var(--gap-s);
-  padding: var(--padding-s);
-}
+
 div.divContact>div {
   display: flex;
   flex-direction: column;
   gap: var(--gap-s);
   justify-content: center;
-  align-items: center;
-  width: 50%;
+  align-items: start;
+  width: 40%;
 }
 section>div.divContact>img{
   width: 50%;
   border-radius: 20px;
 }
-
 article{
   display: flex;
   flex-direction: column;
@@ -58,6 +52,17 @@ article p {
 @media (max-width: 500px){
     section.contact> h2 {
       font-size: 20px;
+}
+div.divContact>div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+section>div.divContact>img{
+  width: 100%;
 }
 }
 @media (max-width:1400px) and (min-width:1000px){
