@@ -27,6 +27,7 @@ div.classList.add("divBT");
   const button = document.createElement("button");
   const imgButton =document.createElement("img");
 
+  button.id= element.id;
 imgButton.src= element.img;
 imgButton.alt= element.language;
 

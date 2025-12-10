@@ -10,6 +10,7 @@ export const experienceStudiesSection = () => {
     const body = document.querySelector("body");
     section = document.createElement("section");
     section.className = "expStu";
+     section.id="exptudies";
     body.appendChild(section);
   }
 

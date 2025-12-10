@@ -1,7 +1,7 @@
 export const arrayMenu = [
   {
 name:"Sobre mí",
-anchor:"about",
+anchor:"aboutMe",
 },
   {
 name:"Conocimientos",

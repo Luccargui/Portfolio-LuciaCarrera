@@ -6,6 +6,7 @@ import { arrayOpinions } from "../../data/arrayOpinions";
 export const contactSection = () => {
   const body = document.querySelector("body");
   const section = document.createElement("section");
+  section.id="contact";
 
   const h2 = document.createElement("h2");
    h2.textContent="Contacto";

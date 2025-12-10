@@ -8,6 +8,8 @@ export const skillsSection = ()=> {
   const h2 = document.createElement("h2");
   const divSkills =document.createElement("div");
 
+  section.id= "skills";
+  
   for (const element of arraySkills) {
     const img =document.createElement("img");
     img.src= element.img;

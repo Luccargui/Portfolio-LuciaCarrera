@@ -7,6 +7,8 @@ export const projectsSection = () => {
 
   const section = document.createElement("section");
    section.className = "project";
+   section.id="projects";
+   
      body.appendChild(section);
 
   const h2 = document.createElement("h2");

@@ -9,6 +9,7 @@ const body = document.querySelector("body");
   const p = document.createElement("p");
 
 section.className= "aboutMe";
+section.id= "aboutMe";
 h2.textContent= `Conóceme`;
 h3.textContent= `Hi, I'm Lucía — a curious mind with a strategy-driven heart.`;
 p.innerHTML= `<p>My journey into the world of digital marketing wasn't linear — it's been a path shaped by curiosity, creativity, and a constant desire to understand how stories connect people and brands. From studying English in Seville and Amsterdam to managing SEO strategies and launching digital campaigns, every step has helped me grow into the versatile professional I am today.</p>
