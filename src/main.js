@@ -8,7 +8,7 @@ import { experienceStudiesSection } from './Components/experienceStudies/experie
 import { projectsSection } from './Components/projects/projects';
 import { contactSection } from './Components/contactForm/contactForm';
 
-headerSection(arrayMenu);
+headerSection();
 helloSection();
 aboutMeSection();
 skillsSection();
