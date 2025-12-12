@@ -21,33 +21,42 @@ export const dataTextExp = {
       h2: "Experiencia y Estudios",
       h3: "Formación Académica",
       back: "Volver Atrás",
-      viewStu: "Ver Experiencia" },
+      viewExp: "Ver Experiencia" },
     en: {
       h2: "Experience & Studies",
       h3: "Academic Training",
       back: "Go Back",
-      viewStu: "See Experience" },
+      viewExp: "See Experience" },
     nl: {
       h2: "Ervaring en Studies",
       h3: "Academische Opleiding",
       back: "Ga Terug",
-      viewStu: "Bekijk Werkervaring" }
+      viewExp: "Bekijk Werkervaring" }
   };
 
-  export const dataTextGenExpStu= {
-    es: {
-       h2:"Experiencia y Estudios",
-       expButton:"Experiencia",
-       stuButton:"Estudios",
-    },
-    en: {
-        h2: "Experience and Studies",
-        expButton: "Experience",
-        stuButton: "Studies",
-    },
-    nl: {
-        h2: "Ervaring en Studies",
-        expButton: "Ervaring",
-        stuButton: "Studies",
-    }
+  export const dataTextGenExpStu = {
+  es: {
+    h2: "Experiencia y Estudios",
+    expTitle: "Ver Experiencia",
+    expButton: "Experiencia",
+    stuButton: "Estudios",
+    stuTitle: "Ver Estudios",
+    back: "Volver Atrás",
+  },
+  en: {
+    h2: "Experience & Studies",
+    expTitle: "See Experience",
+    expButton: "Experience",
+    stuButton: "Studies",
+    stuTitle: "See Studies",
+    back: "Go Back",
+  },
+  nl: {
+    h2: "Ervaring en Studies",
+    expTitle: "Bekijk Werkervaring",
+    expButton: "Ervaring",
+    stuButton: "Studies",
+    stuTitle: "Bekijk Studies",
+    back: "Ga Terug",
   }
+};

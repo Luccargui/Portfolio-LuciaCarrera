@@ -185,3 +185,10 @@ export const arrayProjects = {
     }
   ]
 };
+
+
+export const h2Pro = {
+  es: "Proyectos",
+  en: "Projects",
+  nl: "Projecten",
+};

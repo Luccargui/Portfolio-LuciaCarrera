@@ -1,4 +1,4 @@
-import { dataTextGenExpStu } from "../../data/dataTextExpStu";
+import { dataTextGenExpStu, dataTextExp, dataTextStu } from "../../data/dataTextExpStu";
 import { arrayStudies } from "../../data/studies";
 import { arrayExperience } from "../../data/workingExperience";
 import { createExpSection, createStuSection } from "../createExpStuSection/createExpStuSection";
@@ -8,7 +8,7 @@ import "./experienceStudies.css";
 
 export const experienceStudiesSection = () => {
   let section = document.querySelector("section.expStu");
-  let currentLang = localStorage.getItem("lang") || "es";
+ let currentLang = localStorage.getItem("lang") || "es";
 
   if (!section) {
     section = document.createElement("section");
@@ -42,23 +42,29 @@ export const experienceStudiesSection = () => {
   divButtons.appendChild(stuButton);
 };
 export const expButtonFunction = () => {
-  let currentLang = localStorage.getItem("lang") || "es";
+let currentLang = localStorage.getItem("lang") || "es";
 
-  buttonToArticle(arrayExperience, dataTextGenExpStu[currentLang].expTitle);
+buttonToArticle(arrayExperience[currentLang], dataTextGenExpStu[currentLang].expTitle);
+
   buttonsExpStuToOTher(
     dataTextGenExpStu[currentLang].viewStu,
-    arrayExperience,
-    dataTextGenExpStu[currentLang].viewExp
+    arrayStudies,
+    dataTextGenExpStu[currentLang].stuTitle
   );
 };
+
 
 export const stuButtonFunction = () => {
   let currentLang = localStorage.getItem("lang") || "es";
+ buttonToArticle(arrayStudies[currentLang], dataTextGenExpStu[currentLang].stuTitle);
 
-  buttonToArticle(arrayStudies, dataTextGenExpStu[currentLang].stuTitle);
   buttonsExpStuToOTher(
     dataTextGenExpStu[currentLang].viewExp,
-    arrayStudies,
-    dataTextGenExpStu[currentLang].viewStu
+    arrayExperience,
+    dataTextGenExpStu[currentLang].expTitle
   );
 };
+
+
+
+

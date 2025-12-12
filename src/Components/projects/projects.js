@@ -1,46 +1,43 @@
-import { arrayProjects } from "../../data/arrayProjects";
+import { arrayProjects, h2Pro } from "../../data/arrayProjects";
 import { createArticles } from "../createArticles/createArticles";
 import "./projects.css";
 
 export const projectsSection = () => {
-    const body = document.querySelector("body");
+  const body = document.querySelector("body");
 
   const section = document.createElement("section");
-   section.className = "project";
-   section.id="projects";
-   
-     body.appendChild(section);
+  section.className = "project";
+  section.id = "projects";
+  body.appendChild(section);
+
+let currentLang = localStorage.getItem("lang") || "es";
 
   const h2 = document.createElement("h2");
- h2.textContent = "Proyectos";
+  h2.textContent = h2Pro[currentLang];
   section.appendChild(h2);
 
-  let currentLang = "es";
+  const parent = document.createElement("div");
+  parent.className = "projects-container";
+  section.appendChild(parent);
 
-    createArticles(arrayProjects[currentLang], "project");
+  createArticles(arrayProjects[currentLang], "project", parent);
 
- const esbutton = document.querySelector("button#es");
- const enbutton = document.querySelector("button#en");
- const nlbutton = document.querySelector("button#nl");
+  const esbutton = document.querySelector("button#es");
+  const enbutton = document.querySelector("button#en");
+  const nlbutton = document.querySelector("button#nl");
 
+  const changeLang = (lang) => {
+    currentLang = lang;
 
+    h2.textContent = h2Pro[currentLang];
+    parent.innerHTML = "";
 
-esbutton.addEventListener("click", () => {
-  parent.innerHTML = "";
-  currentLang = "es";
-  h2.textContent = "Proyectos";
-  createArticles(arrayProjects[currentLang], "project");
-  });
-enbutton.addEventListener("click", () => {
-  parent.innerHTML = "";
-  currentLang = "en";
-  h2.textContent = "Projects";
-  createArticles(arrayProjects[currentLang], "project");
-  });
-nlbutton.addEventListener("click", () => {
-  parent.innerHTML = "";
-  currentLang = "nl";
-  h2.textContent = "Projecten";
-  createArticles(arrayProjects[currentLang], "project");
-  });
-}
+    createArticles(arrayProjects[currentLang], "project", parent);
+
+    setItem("lang", lang);
+  };
+
+  esbutton.addEventListener("click", () => changeLang("es"));
+  enbutton.addEventListener("click", () => changeLang("en"));
+  nlbutton.addEventListener("click", () => changeLang("nl"));
+};

@@ -22,7 +22,7 @@ export const createExpSection = () => {
   h3.textContent = t.h3;
 
   backButton.textContent = t.back;
-  viewStuButton.textContent = dataTextStu[currentLang].viewStu;
+  viewStuButton.textContent = dataTextExp[currentLang].viewStu;
 
   divButtons.className = "divButtons";
 
@@ -30,7 +30,6 @@ export const createExpSection = () => {
     section.innerHTML = "";
     experienceStudiesSection();
   });
-
   viewStuButton.addEventListener("click", () => {
     createStuSection();
   });
@@ -65,7 +64,7 @@ export const createStuSection = () => {
   h3.textContent = t.h3;
 
   backButton.textContent = t.back;
-  viewExpButton.textContent = dataTextExp[currentLang].viewExp;
+  viewExpButton.textContent = dataTextStu[currentLang].viewExp;
 
   divButtons.className = "divButtons";
 
@@ -74,9 +73,10 @@ export const createStuSection = () => {
     experienceStudiesSection();
   });
 
-  viewExpButton.addEventListener("click", () => {
+ viewExpButton.addEventListener("click", () => {
     createExpSection();
   });
+
 
   createArticles(arrayStudies[currentLang], "expStu");
 
