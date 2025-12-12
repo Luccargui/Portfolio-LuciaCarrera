@@ -15,3 +15,33 @@ skillsSection();
 experienceStudiesSection();
 projectsSection();
 contactSection();
+
+document.querySelector("#es").addEventListener("click", () => {
+  localStorage.setItem("lang", "es");
+helloSection();
+aboutMeSection();
+skillsSection();
+experienceStudiesSection();
+projectsSection();
+contactSection();
+});
+
+document.querySelector("#en").addEventListener("click", () => {
+  localStorage.setItem("lang", "en");
+helloSection();
+aboutMeSection();
+skillsSection();
+experienceStudiesSection();
+projectsSection();
+contactSection();
+});
+
+document.querySelector("#nl").addEventListener("click", () => {
+  localStorage.setItem("lang", "nl");
+helloSection();
+aboutMeSection();
+skillsSection();
+experienceStudiesSection();
+projectsSection();
+contactSection();
+});

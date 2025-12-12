@@ -33,3 +33,21 @@ export const dataTextExp = {
       back: "Ga Terug",
       viewStu: "Bekijk Werkervaring" }
   };
+
+  export const dataTextGenExpStu= {
+    es: {
+       h2:"Experiencia y Estudios",
+       expButton:"Experiencia",
+       stuButton:"Estudios",
+    },
+    en: {
+        h2: "Experience and Studies",
+        expButton: "Experience",
+        stuButton: "Studies",
+    },
+    nl: {
+        h2: "Ervaring en Studies",
+        expButton: "Ervaring",
+        stuButton: "Studies",
+    }
+  }
