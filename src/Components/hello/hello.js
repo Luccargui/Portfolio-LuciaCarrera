@@ -1,3 +1,4 @@
+import { dataHello } from "../../data/dataHello";
 import "./hello.css";
 
 
@@ -16,6 +17,28 @@ h1.textContent= `Lucía Carrera`;
 p.innerHTML= `Full Stack Developper en proceso`;
 img.src="../../assets/Media/Imagen1.jpg";
 img.alt="me";
+const esbutton = document.querySelector("button#es");
+  const enbutton = document.querySelector("button#en");
+  const nlbutton = document.querySelector("button#nl");
+  
+esbutton.addEventListener("click", () => {
+  parent.innerHTML = "";
+  h2.innerHTML= dataHello.es.h2;
+  h1.textContent= dataHello.es.h1;
+  p.innerHTML= dataHello.es.p;
+});
+  enbutton.addEventListener("click", () => {
+    parent.innerHTML = "";
+  h2.innerHTML= dataHello.en.h2;
+  h1.textContent= dataHello.en.h1;
+  p.innerHTML= dataHello.en.p;
+  });
+  nlbutton.addEventListener("click", () => {
+    parent.innerHTML = "";
+  h2.innerHTML= dataHello.nl.h2;
+  h1.textContent= dataHello.nl.h1;
+  p.innerHTML= dataHello.nl.p;
+  });
 
 body.appendChild(section);
 section.appendChild(divText);

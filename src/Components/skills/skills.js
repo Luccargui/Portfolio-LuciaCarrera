@@ -20,6 +20,20 @@ export const skillsSection = ()=> {
   section.className="skills";
   h2.textContent=`Conocimientos`;
 
+const esbutton = document.querySelector("button#es");
+const enbutton = document.querySelector("button#en");
+const nlbutton = document.querySelector("button#nl");
+
+ esbutton.addEventListener("click", () => {
+    h2.textContent=`Conocimientos`;
+ });
+ enbutton.addEventListener("click", () => {
+    h2.textContent=`Skills`;
+ });
+ nlbutton.addEventListener("click", () => {
+    h2.textContent=`Vaardigheden`;
+ });
+
   body.appendChild(section);
   section.appendChild(h2);
   section.appendChild(divSkills);
