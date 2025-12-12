@@ -1,6 +1,8 @@
 import { arrayStudies } from "../../data/studies";
 import { arrayExperience } from "../../data/workingExperience";
 import { createExpSection, createStuSection } from "../createExpStuSection/createExpStuSection";
+import { buttonsExpStuToOTher } from "./buttonsExpStuToOTher";
+import { buttonToArticle } from "./buttonToArticle";
 import "./experienceStudies.css";
 
 export const experienceStudiesSection = () => {
@@ -22,13 +24,31 @@ export const experienceStudiesSection = () => {
   const stuButton = document.createElement("button");
   
   h2.textContent = "Experiencia y Estudios";
-  
   expButton.textContent = "Experiencia";
   expButton.type = "button";
   
   stuButton.textContent = "Estudios";
   stuButton.type = "button";
+
+  const esbutton = document.querySelector("button#es");
+  const enbutton = document.querySelector("button#en");
+  const nlbutton = document.querySelector("button#nl");
   
+esbutton.addEventListener("click", () => {
+  h2.textContent = "Experiencia y Estudios";
+  expButton.textContent = "Experiencia";
+  stuButton.textContent = "Estudios";
+  });
+  enbutton.addEventListener("click", () => {
+  h2.textContent = "Experience and Studies";
+  expButton.textContent = "Experience";
+  stuButton.textContent = "Studies";
+  });
+  nlbutton.addEventListener("click", () => {
+  h2.textContent = "Ervaring en Studies";
+  expButton.textContent = "Ervaring";
+  stuButton.textContent = "Studies";
+  });
   divButtons.className = "divButtons";
 
   expButton.addEventListener("click", () => createExpSection());

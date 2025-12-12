@@ -1,4 +1,4 @@
-export const createArticles = (array, classSection) => { 
+export const createArticles = (array, classSection) => {
   const section = document.querySelector(`.${classSection}`);
   const oldDiv = section.querySelector(".divArray");
   if (oldDiv) oldDiv.remove();
@@ -31,9 +31,11 @@ export const createArticles = (array, classSection) => {
     if (element.link) {
       const a = document.createElement("a");
       a.href = element.link;
+
       const button = document.createElement("button");
-      button.textContent = element.button;
+      button.textContent = element.button || "Ver";
       a.appendChild(button);
+
       textContainer.appendChild(a);
     }
   };
@@ -46,6 +48,14 @@ export const createArticles = (array, classSection) => {
     textContainer.className = "text-container";
     article.appendChild(textContainer);
 
+    const baseFlex = {
+      display: "flex",
+      height: "100%",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "space-between"
+    };
+
     if (element.img) {
       article.style.backgroundImage = `url(${element.img})`;
       article.style.backgroundRepeat = "no-repeat";
@@ -55,13 +65,7 @@ export const createArticles = (array, classSection) => {
 
       article.addEventListener("mouseenter", () => {
         article.style.backgroundSize = "0%";
-        Object.assign(textContainer.style, {
-          display: "flex",
-          height: "100%",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "space-between"
-        });
+        Object.assign(textContainer.style, baseFlex);
       });
 
       article.addEventListener("mouseleave", () => {
@@ -69,13 +73,7 @@ export const createArticles = (array, classSection) => {
         textContainer.style.display = "none";
       });
     } else {
-      Object.assign(textContainer.style, {
-        display: "flex",
-        height: "100%",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "space-between"
-      });
+      Object.assign(textContainer.style, baseFlex);
     }
 
     buildText(element, textContainer);

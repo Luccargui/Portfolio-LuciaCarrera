@@ -85,7 +85,7 @@ export const headerSection = () => {
   const logo = createLogo();
   const languageButtons = createLanguageButtons();
   const themeSwitcher = createThemeSwitcher();
-  const burgerMenu = createBurgerMenu(ul);
+   const burgerMenu = createBurgerMenu(ul);
 
   body.appendChild(header);
   header.appendChild(nav);
