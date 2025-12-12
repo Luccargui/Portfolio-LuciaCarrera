@@ -8,40 +8,24 @@ import { experienceStudiesSection } from './Components/experienceStudies/experie
 import { projectsSection } from './Components/projects/projects';
 import { contactSection } from './Components/contactForm/contactForm';
 
-headerSection();
-helloSection();
-aboutMeSection();
-skillsSection();
-experienceStudiesSection();
-projectsSection();
-contactSection();
+const renderContent = () => {
+  headerSection();
+  helloSection();
+  aboutMeSection();
+  skillsSection();
+  experienceStudiesSection();
+  projectsSection();
+  contactSection();
+};
 
-document.querySelector("#es").addEventListener("click", () => {
-  localStorage.setItem("lang", "es");
-helloSection();
-aboutMeSection();
-skillsSection();
-experienceStudiesSection();
-projectsSection();
-contactSection();
-});
+renderContent();
 
-document.querySelector("#en").addEventListener("click", () => {
-  localStorage.setItem("lang", "en");
-helloSection();
-aboutMeSection();
-skillsSection();
-experienceStudiesSection();
-projectsSection();
-contactSection();
-});
+const changeLanguage = (lang) => {
+  localStorage.setItem("lang", lang);
+  document.body.innerHTML = '';
+  renderContent();
+};
 
-document.querySelector("#nl").addEventListener("click", () => {
-  localStorage.setItem("lang", "nl");
-helloSection();
-aboutMeSection();
-skillsSection();
-experienceStudiesSection();
-projectsSection();
-contactSection();
-});
+document.querySelector("#es").addEventListener("click", () => changeLanguage("es"));
+document.querySelector("#en").addEventListener("click", () => changeLanguage("en"));
+document.querySelector("#nl").addEventListener("click", () => changeLanguage("nl"));
