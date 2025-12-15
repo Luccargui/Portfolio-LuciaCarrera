@@ -68,6 +68,10 @@ article>div>a>button:hover {
   background-color: var(--color-secondary);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.projects-container{
+overflow: hidden;
+}
 @media (max-width: 500px){
     section.project> h2 {
       font-size: 20px;
