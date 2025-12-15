@@ -12,7 +12,7 @@ section.project>h2 {
   font-size: 40px;
 }
 
-section.project>div {
+section.project>div.divArray {
 display: flex;
 width:100%;
   padding: var(--padding-s);
@@ -68,9 +68,7 @@ article>div>a>button:hover {
   background-color: var(--color-secondary);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-div.project-container {
-  scrollbar-width: none;
-}
+
 @media (max-width: 500px){
     section.project> h2 {
       font-size: 20px;

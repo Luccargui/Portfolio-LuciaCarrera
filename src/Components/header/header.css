@@ -32,10 +32,6 @@ nav>ul {
   gap: var(--gap-m);
 }
 
-nav>ul>a>li{
-  font-size: 18px;
-}
-
 .divBT{
   height:25px;
   width:100%;

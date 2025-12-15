@@ -1,3 +1,4 @@
+import "./createExpStuSection.css";
 import { dataTextExp, dataTextStu } from "../../data/dataTextExpStu";
 import { arrayStudies } from "../../data/studies";
 import { arrayExperience } from "../../data/workingExperience";

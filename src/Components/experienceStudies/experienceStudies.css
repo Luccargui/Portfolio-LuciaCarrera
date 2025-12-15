@@ -1,13 +1,3 @@
-section.expStu {
-  width:100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: var(--gap-s);
-  padding: var(--padding-m);
-  flex-wrap: wrap;
-}
 section.expStu>h2 {
   font-size: 40px;
 }

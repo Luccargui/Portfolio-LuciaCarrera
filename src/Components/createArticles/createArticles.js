@@ -1,3 +1,5 @@
+import "./createArticles.css"
+
 export const createArticles = (array, classSection) => {
   const section = document.querySelector(`.${classSection}`);
   const oldDiv = section.querySelector(".divArray");

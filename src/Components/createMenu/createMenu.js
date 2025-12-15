@@ -1,3 +1,4 @@
+import "./createMenu.css";
 import { arrayMenu } from "../../data/arrayMenu";
 
 export const createMenu = (parent) => {
