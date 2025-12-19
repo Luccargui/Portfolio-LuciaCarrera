@@ -62,13 +62,12 @@ const createThemeSwitcher = () => {
   themeMode.alt = "dark-light-mode-switch";
 
   themeMode.addEventListener("click", () => {
-    const body = document.querySelector("body");
-    body.classList.toggle("light");
+    const root = document.documentElement;
 
-    localStorage.setItem(
-      "theme",
-      body.classList.contains("light") ? "light" : "dark"
-    );
+    const isLight = root.getAttribute("data-theme") === "light";
+    root.setAttribute("data-theme", isLight ? "dark" : "light");
+
+    localStorage.setItem("theme", isLight ? "dark" : "light");
   });
 
   return themeMode;
