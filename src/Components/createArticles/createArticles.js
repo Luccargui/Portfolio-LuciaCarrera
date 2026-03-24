@@ -52,7 +52,7 @@ export const createArticles = (array, classSection) => {
 
     const baseFlex = {
       display: "flex",
-      height: "100%",
+      height: "700px",
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "space-between"
@@ -65,12 +65,12 @@ export const createArticles = (array, classSection) => {
       article.style.backgroundPosition = "center";
       textContainer.style.display = "none";
 
-      article.addEventListener("mouseenter", () => {
+      article.addEventListener("pointerenter", () => {
         article.style.backgroundSize = "0%";
         Object.assign(textContainer.style, baseFlex);
       });
 
-      article.addEventListener("mouseleave", () => {
+      article.addEventListener("pointerleave", () => {
         article.style.backgroundSize = "cover";
         textContainer.style.display = "none";
       });
