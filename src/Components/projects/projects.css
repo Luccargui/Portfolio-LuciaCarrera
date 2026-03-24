@@ -57,7 +57,8 @@ article>div>a>button {
   color: var(--color-secondary);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-article>div>a>button:hover {
+article>div>a>button:hover,
+article>div>a>button[open] {
   padding:var(--padding-xxs) var(--padding-m);
   font-weight: 600;
   border-radius: 20px;
