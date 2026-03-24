@@ -55,12 +55,12 @@ export const createArticles = (array, classSection) => {
       height: "350px",
       flexDirection: "column",
       alignItems: "center",
-      justifyContent: "space-between"
+      justifyContent: "space-evenly",
     };
 
     if (element.img) {
       article.style.backgroundImage = `url(${element.img})`;
-      article.style.height= "350px";
+      article.style.height= "550px";
       article.style.backgroundRepeat = "no-repeat";
       article.style.backgroundSize = "cover";
       article.style.backgroundPosition = "center";
