@@ -76,6 +76,17 @@ export const createArticles = (array, classSection) => {
         article.style.backgroundSize = "cover";
         textContainer.style.display = "none";
       });
+      article.addEventListener("click", () => {
+  const isHidden = textContainer.style.display === "none";
+
+  if (isHidden) {
+    article.style.backgroundSize = "0%";
+    Object.assign(textContainer.style, baseFlex);
+  } else {
+    article.style.backgroundSize = "cover";
+    textContainer.style.display = "none";
+  }
+});
     } else {
       Object.assign(textContainer.style, baseFlex);
     }
