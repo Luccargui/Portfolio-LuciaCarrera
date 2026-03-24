@@ -52,7 +52,7 @@ export const createArticles = (array, classSection) => {
 
     const baseFlex = {
       display: "flex",
-      height: "700px",
+      height: "350px",
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "space-between"
@@ -60,10 +60,12 @@ export const createArticles = (array, classSection) => {
 
     if (element.img) {
       article.style.backgroundImage = `url(${element.img})`;
+      article.style.height= "350px";
       article.style.backgroundRepeat = "no-repeat";
       article.style.backgroundSize = "cover";
       article.style.backgroundPosition = "center";
       textContainer.style.display = "none";
+    
 
       article.addEventListener("pointerenter", () => {
         article.style.backgroundSize = "0%";
