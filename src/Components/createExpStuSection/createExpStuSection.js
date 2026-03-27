@@ -2,7 +2,7 @@ import "./createExpStuSection.css";
 import { dataTextExp, dataTextStu } from "../../data/dataTextExpStu";
 import { arrayStudies } from "../../data/studies";
 import { arrayExperience } from "../../data/workingExperience";
-import { createArticles } from "../createArticles/createArticles";
+import { createExpStuArticles } from "../createExpStuArticles/createExpStuArticles";
 import { experienceStudiesSection } from "../experienceStudies/experienceStudies";
 
 export const createExpSection = () => {
@@ -35,7 +35,7 @@ export const createExpSection = () => {
     createStuSection();
   });
 
-  createArticles(arrayExperience[currentLang], "expStu");
+  createExpStuArticles(arrayExperience[currentLang], "expStu");
 
   const divArray = document.querySelector(".divArray");
 
@@ -79,7 +79,7 @@ export const createStuSection = () => {
   });
 
 
-  createArticles(arrayStudies[currentLang], "expStu");
+  createExpStuArticles(arrayStudies[currentLang], "expStu");
 
   const divArray = document.querySelector(".divArray");
 

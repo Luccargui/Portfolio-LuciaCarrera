@@ -1,96 +1,43 @@
-import "./createArticles.css"
+import "./createArticles.css";
 
 export const createArticles = (array, classSection) => {
   const section = document.querySelector(`.${classSection}`);
   const oldDiv = section.querySelector(".divArray");
   if (oldDiv) oldDiv.remove();
 
-  const divButtons = document.createElement("div");
-  divButtons.className = "divArray";
-  section.appendChild(divButtons);
+  const container = document.createElement("div");
+  container.className = "cards";
+  section.appendChild(container);
 
-  const buildText = (element, textContainer) => {
+  for (const element of array) {
+    const article = document.createElement("article");
+    article.className = "card";
+
+    if (element.img) {
+      article.style.backgroundImage = `url(${element.img})`;
+    }
+
+    const content = document.createElement("div");
+    content.className = "card-content";
+
     const h4 = document.createElement("h4");
     h4.textContent = element.name;
-    textContainer.appendChild(h4);
-
-    if (element.title) {
-      const title = document.createElement("p");
-      title.textContent = element.title;
-      textContainer.appendChild(title);
-    }
-
-    if (element.duration) {
-      const duration = document.createElement("p");
-      duration.textContent = element.duration;
-      textContainer.appendChild(duration);
-    }
 
     const description = document.createElement("p");
     description.innerHTML = element.description;
-    textContainer.appendChild(description);
+
+    content.appendChild(h4);
+    content.appendChild(description);
 
     if (element.link) {
       const a = document.createElement("a");
       a.href = element.link;
-
-      const button = document.createElement("button");
-      button.textContent = element.button || "Ver";
-      a.appendChild(button);
-
-      textContainer.appendChild(a);
-    }
-  };
-
-  for (const element of array) {
-    const article = document.createElement("article");
-    divButtons.appendChild(article);
-
-    const textContainer = document.createElement("div");
-    textContainer.className = "text-container";
-    article.appendChild(textContainer);
-
-    const baseFlex = {
-      display: "flex",
-      height: "350px",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "space-evenly",
-    };
-
-    if (element.img) {
-      article.style.backgroundImage = `url(${element.img})`;
-      article.style.height= "550px";
-      article.style.backgroundRepeat = "no-repeat";
-      article.style.backgroundSize = "cover";
-      article.style.backgroundPosition = "center";
-      textContainer.style.display = "none";
-    
-
-      article.addEventListener("pointerenter", () => {
-        article.style.backgroundSize = "0%";
-        Object.assign(textContainer.style, baseFlex);
-      });
-
-      article.addEventListener("pointerleave", () => {
-        article.style.backgroundSize = "cover";
-        textContainer.style.display = "none";
-      });
-      article.addEventListener("click", () => {
-  const isHidden = textContainer.style.display === "none";
-
-  if (isHidden) {
-    article.style.backgroundSize = "0%";
-    Object.assign(textContainer.style, baseFlex);
-  } else {
-    article.style.backgroundSize = "cover";
-    textContainer.style.display = "none";
-  }
-});
-    } else {
-      Object.assign(textContainer.style, baseFlex);
+      a.textContent = element.button || "Ver";
+      a.className = "card-btn";
+      content.appendChild(a);
     }
 
-    buildText(element, textContainer);
+    article.appendChild(content);
+    container.appendChild(article);
   }
 };

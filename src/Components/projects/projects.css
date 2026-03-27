@@ -1,3 +1,9 @@
+/* 
+
+
+
+ */
+/**/
 section.project {
   width:100%;
   display: flex;
@@ -11,69 +17,86 @@ section.project {
 section.project>h2 {
   font-size: 40px;
 }
-
-section.project>div.divArray {
-display: flex;
-width:100%;
-  padding: var(--padding-s);
-gap: var(--gap-s);
- scrollbar-color: var(--color-secondary) rgb(254, 41, 113,0.2);
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
+.cards {
+  display: grid;
+  justify-content: center;
+  justify-items:center;
+  align-items: center;
+  width:100%;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
 }
 
-section.project article {
+.card {
   position: relative;
-  min-width: 200px;
-  max-width: 300px;
-  height: 350px;
+  height: 450px;
+  width:375px;
+  margin:0;   
+  padding:0;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Overlay oscuro */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Contenido */
+.card-content {
+  width:100%;
+  height:100%;
+  border-radius: 16px;
+  position: relative;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items:center;
+align-items: center;
   justify-content: center;
-  padding: var(--padding-s);
-  flex: 0 0 100%;
-  scroll-snap-align: center;
-}
-.text-container{
-width: 100%;
-  height: 350px;
+    background: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  margin:0;
+  transform: translateY(100%);
+  transition: transform 1s ease-in-out;
 }
 
-article>div> h4 {
-height:25%;
+/* BOTÓN */
+.card-btn {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
 }
 
-article>div> p {
-  font-size:12px;
-}
-article>div>a {
-  height:15%;
-  height: 5%;
-}
-article>div>a>button {
-  padding:var(--padding-xxs) var(--padding-s);
-  font-weight: 600;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  color: var(--color-secondary);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-article>div>a>button:hover,
-article>div>a>button[open] {
-  padding:var(--padding-xxs) var(--padding-m);
-  font-weight: 600;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  color: var(--color-light);
-  background-color: var(--color-secondary);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* 💻 Desktop hover */
+@media (hover: hover) {
+  .card:hover .card-content {
+    transform: translateY(0);
+  }
+
+  .card:hover::before {
+    opacity: 0.7;
+  }
 }
 
+@media (hover: none) {
+  .card-content {
+    transform: translateY(0);
+  }
+}
 @media (max-width: 500px){
     section.project> h2 {
       font-size: 20px;
